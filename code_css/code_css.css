@@ -1,0 +1,591 @@
+/*
+*
+* Css reset
+*
+*/
+
+html,
+body,
+div,
+span,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+code,
+del,
+dfn,
+em,
+img,
+q,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+dialog,
+figure,
+footer,
+header,
+hgroup,
+nav,
+section {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-weight: inherit;
+    font-style: inherit;
+    font-size: 100%;
+    font-family: inherit;
+    vertical-align: baseline;
+    text-decoration: none;
+    list-style: none;
+}
+img {
+    width: 100%
+}
+a:focus {
+    outline: thin dotted;
+}
+a:hover,
+a:active {
+    outline: 0;
+}
+a img {
+    border: 0;
+}
+*,
+*::before,
+*::after {
+    -webkit-text-rendering: optimizeLegibility;
+    -moz-text-rendering: optimizeLegibility;
+    -ms-text-rendering: optimizeLegibility;
+    -o-text-rendering: optimizeLegibility;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-font-smoothing: antialiased;
+    -ms-font-smoothing: antialiased;
+    -o-font-smoothing: antialiased;
+    font-smoothing: antialiased;
+}
+.anim03 {
+    -webkit-transition: all .3s;
+    -moz-transition: all .3s;
+    -ms-transition: all .3s;
+    -o-transition: all .3s;
+    transition: all .3s;
+}
+/*
+*
+* Css reset end.
+* Reedited for the theme specifics -bg image, body box-sizing etc.
+*
+*/
+
+/*
+*
+* main field positioning
+*
+*/
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    top: 0!important;
+    font-family: "Montserrat", "Nunito", sans-serif;
+}
+html {
+    font-size: 16px;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    background: #fffbeb;
+    color: #666;
+}
+body {
+    overflow: hidden;
+}
+
+.field-main {
+    width: 100%;
+    max-width: 650px;
+    height: 100%;
+    margin: 0 auto;
+    padding: 0 25px;
+    position: relative;
+    -webkit-box-sizing:border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+/*
+*
+* logo - header field 
+*
+*/
+
+.logo-field,
+.logo-field > .logo,
+._LOADED .logo-field > .logo:after,
+.logo-field > .title{
+    -webkit-transition: all .3s .3s;
+    -moz-transition: all .3s .3s;
+    -ms-transition: all .3s .3s;
+    -o-transition: all .3s .3s;
+    transition: all .3s .3s;
+}
+
+.logo-field{
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+
+    height: 100%;
+    max-height: 600px;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+._LOADED .logo-field{
+    height: 200px;
+    max-height: 200px;
+    margin-bottom: 100px;
+    padding-top: 100px;
+    top: 0;
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -o-transform: translateY(0);
+    transform: translateY(0);
+}
+._CLEARED .logo-field{
+    height: 0;
+    max-height: 0;
+    margin-bottom: 0;
+    padding-top: 0;
+    overflow: hidden;
+    opacity: 0;
+}
+
+.logo-field > .logo{
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: relative;
+    background-color: #f1c40f;
+    background-image: url("SaulifyLogo.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border-radius: 3px;
+    box-shadow: 0 1px 2px 0 #bbb;
+    overflow: hidden;
+}
+.logo-field > .logo:after{
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: rgba(241, 196, 15, 0.5);
+    border-radius: 3px;
+    position: absolute;
+    top: 0;left: 0;
+    visibility: hidden;
+    opacity: 0;
+}
+._LOADED .logo-field > .logo:after{
+    visibility: visible;
+    opacity: 1;
+}
+._CLEARED .logo-field > .logo{
+    visibility: hidden;
+    opacity: 0;
+}
+
+.logo-field > .title{
+    width: 100%;
+    color: #eee;
+    text-shadow: 0 1px 1px #444;
+    font-family: "Nunito", "Montserrat", sans-serif;
+    font-weight: 900;
+    text-align: center;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    font-size: 50px;
+    line-height: 100px;
+    position: absolute;
+    
+    bottom: 0;
+    visibility: hidden;
+    opacity: 0;
+}
+._LOADED .logo-field > .title{
+    bottom: 50px;
+    visibility: visible;
+    opacity: 1;
+}
+._CLEARED .logo-field > .title{
+    bottom: -50px;
+    visibility: hidden;
+    opacity: 0;
+}
+.logo-field > .title a{
+    color: #eee;
+}
+
+/*
+*
+* Textbox & Submit field 
+*
+*/
+
+#url-form{
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 25px;
+    -webkit-box-sizing:border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+._CLEARED #url-form{
+    height: 50px;
+}
+
+#url-form input{
+    width: 100%;
+    height: 50px;
+    display: block;
+    padding: 15px;
+    position: relative;
+    -webkit-box-sizing:border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    border: none;
+    outline: none;
+    border-radius: 0;
+    box-shadow: 0 1px 3px 0 #bbb;
+    font-family: "Nunito", "Montserrat", sans-serif;
+    font-size: 16px;
+    line-height: 20px;
+}
+#url-form #url,
+._CLEARED #url-form #url:focus{
+    border-radius: 2px 2px 0 0;
+}
+._CLEARED #url-form #url{
+    border-radius: 2px;
+}
+
+#url-form #submit{
+    border-radius: 0 0 2px 2px;
+}
+._CLEARED #url-form #submit{
+    top: -25px;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    
+    -webkit-transition-property: top, visibility, opacity !important;
+    transition-duration: .1s !important;
+    transition-delay: 0 !important;
+}
+._CLEARED #url-form #submit:hover,
+._CLEARED #url-form #url:focus ~ #submit{
+    top: 0;
+    visibility: visible!important;
+    opacity: 1 !important;
+    
+    -webkit-transition-property: top, visibility, opacity !important;
+    transition-duration: .1s !important;
+    transition-delay: 0 !important;
+}
+
+#url-form #url{
+    background: #fff;
+    color: #666;
+}
+#url-form #url:hover{
+    color: #444;
+}
+#url-form #url:focus{
+    background: #fbfbfb;
+    color: #444;
+}
+
+#url-form #submit{
+    background: #fff;
+    color: #f1c40f;
+    font-weight: 900;
+    cursor: pointer;
+}
+#url-form #submit:hover{
+    background: #eaf8ff;
+    color: #2cbeff;
+}
+#url-form #submit:active{
+    background: #2cbeff;
+    color: #eaf8ff;
+}
+/*
+#url-form #submit:hover{
+    background: #fffbeb;
+    color: #f1c40f;
+}
+#url-form #submit:active{
+    background: #f1c40f;
+    color: #fffbeb;
+}
+*/
+
+
+#url-form #url,
+#url-form #submit{
+    -webkit-transition-property: transform, visibility, opacity;
+    -webkit-transition-duration: .6s;
+    -webkit-transition-timing-function: ease;
+    -webkit-transition-delay: 0.3s;
+    -moz-transition-property: transform, visibility, opacity;
+    -moz-transition-duration: .6s;
+    -moz-transition-timing-function: ease;
+    -moz-transition-delay: 0.3s;
+    -ms-transition-property: transform, visibility, opacity;
+    -ms-transition-duration: .6s;
+    -ms-transition-timing-function: ease;
+    -ms-transition-delay: 0.3s;
+    -o-transition-property: transform, visibility, opacity;
+    -o-transition-duration: .6s;
+    -o-transition-timing-function: ease;
+    -o-transition-delay: 0.3s;
+    transition-property: transform, visibility, opacity;
+    transition-duration: .6s;
+    transition-timing-function: ease;
+    transition-delay: 0.3s;
+    visibility: hidden;
+    opacity: 0;
+}
+#url-form #url{
+    -webkit-transform: translateY(300px);
+    -moz-transform: translateY(300px);
+    -ms-transform: translateY(300px);
+    -o-transform: translateY(300px);
+    transform: translateY(300px);
+}
+#url-form #submit{
+    -webkit-transform: translateY(450px);
+    -moz-transform: translateY(450px);
+    -ms-transform: translateY(450px);
+    -o-transform: translateY(450px);
+    transform: translateY(450px);
+}
+
+._LOADED #url-form #url,
+._LOADED #url-form #submit{
+    visibility: visible;
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -o-transform: translateY(0);
+    transform: translateY(0);
+}
+
+/*
+*
+* some browser hacks 
+*
+*/
+
+::selection{
+    background: #f1c40f;
+    color: #fff
+}
+::-moz-selection{
+    background: #f1c40f;
+    color: #fff
+}
+
+::-webkit-input-placeholder {
+    color: #aaa;
+}
+:-moz-placeholder {
+    color: #aaa;
+    opacity: 1;
+}
+::-moz-placeholder {
+    color: #aaa;
+    opacity: 1;
+}
+:-ms-input-placeholder {
+    color: #aaa;
+}
+
+/*
+*
+* Responsive sizes
+*
+*/
+
+@media screen and (max-width: 480px) {
+    .logo-field > .title{
+        font-size: 30px;
+    }
+    #url-form > #url {
+        font-size: 13px;
+    }
+}
+@media screen and (max-width: 320px) {
+    #url-form > #url {
+        font-size: 10px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+*
+* Colors
+*
+
+#4cc1ab
+#f15e22
+#ed3f3e
+#cbd1a9
+#82669c
+#e06c63
+#2cbeff
+#1abc9c
+#34495e
+#ec6d67
+#f1c40f
+#6a4a3c
+#2ecc71
+
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*-----*/
+
+.status {
+    width: 100px;
+    height: 50px;
+    padding: 10px;
+    border: 0;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    z-index: 999999;
+    font: 100 14px/20px"Open Sans Condensed", sans-serif;
+    text-align: right;
+    background: #444;
+    color: #bbb;
+    opacity: 0.8;
+    overflow-x: hidden;
+    overflow-y: auto;
+    outline: 0;
+}
+.status:hover,
+.status:focus {
+    width: 180px;
+    height: 130px;
+    opacity: 1;
+}
+.status:focus {
+    outline: 2px solid #ff2c2c;
+}
