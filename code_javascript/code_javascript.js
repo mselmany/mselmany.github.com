@@ -1,21 +1,13 @@
 $(document).ready(function () {
 
-
-
-
-
-
     $(window).on("load", function () {
-        setTimeout(function () {
-            $("body").addClass("_LOADED");
-        }, 250);
+        $("body").addClass("_LOADED");
     });
 
     $(window).on("load resize", function () {
         var $logoField = $(".logo-field");
         $logoField.css("height", $logoField.outerWidth() + "px");
     });
-
 
     $("#submit").on("click", function () {
         var $that = $(this);
@@ -27,7 +19,7 @@ $(document).ready(function () {
                     $("body").addClass("_CLEARED");
                     $that.attr("value","Clear it");
                 }, 500);
-            }, 1000);
+            }, 500);
         }else {
             setTimeout(function () {
                 $("body").removeClass("_CLEARED");
@@ -39,26 +31,4 @@ $(document).ready(function () {
     
     
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-
-
 });
