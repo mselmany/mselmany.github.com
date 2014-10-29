@@ -201,8 +201,8 @@ body {
     height: 100%;
     display: block;
     position: relative;
-    background-color: #f1c40f;/*
-    background-image: url(others/SaulifyLogo.png);*/
+    background-color: #f1c40f;
+    background-image: url("others/SaulifyLogo.png");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
