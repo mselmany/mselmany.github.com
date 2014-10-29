@@ -484,28 +484,6 @@ body {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /*
 *
 * Colors
@@ -526,69 +504,3 @@ body {
 #2ecc71
 
 */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*-----*/
-
-.status {
-    width: 100px;
-    height: 50px;
-    padding: 10px;
-    border: 0;
-    position: fixed;
-    bottom: 0;
-    right: 0;
-    z-index: 999999;
-    font: 100 14px/20px"Open Sans Condensed", sans-serif;
-    text-align: right;
-    background: #444;
-    color: #bbb;
-    opacity: 0.8;
-    overflow-x: hidden;
-    overflow-y: auto;
-    outline: 0;
-}
-.status:hover,
-.status:focus {
-    width: 180px;
-    height: 130px;
-    opacity: 1;
-}
-.status:focus {
-    outline: 2px solid #ff2c2c;
-}
