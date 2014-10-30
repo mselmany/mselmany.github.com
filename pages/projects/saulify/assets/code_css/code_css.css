@@ -119,203 +119,30 @@ body {
     width: 100%;
     height: 100%;
     top: 0!important;
-    font-family: "Nunito", "Montserrat", sans-serif;
+    font-family: "Montserrat", "Nunito", sans-serif;
 }
 html {
-    font-size: 14px;
+    font-size: 16px;
     -webkit-text-size-adjust: 100%;
     -ms-text-size-adjust: 100%;
-    background: #fff;
-    color: #3e7ef8;
+    background: #fffbeb;
+    color: #666;
 }
 body {
     overflow: hidden;
 }
 
-._border-box{
-    -webkit-box-sizing:border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-}
-
 .field-main {
     width: 100%;
-    max-width: 640px;
+    max-width: 650px;
     height: 100%;
     margin: 0 auto;
     padding: 0 25px;
     position: relative;
+    -webkit-box-sizing:border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
 }
-
-.field-desktop{
-    position: absolute;
-    top: 50%;left: 50%;
-    -webkit-transform: translateX(-50%) translateY(-50%);
-    -moz-transform: translateX(-50%) translateY(-50%);
-    -ms-transform: translateX(-50%) translateY(-50%);
-    -o-transform: translateX(-50%) translateY(-50%);
-    transform: translateX(-50%) translateY(-50%);
-}
-.field-desktop:before,
-.field-desktop:after{
-    content: "";
-    width: 0;
-    height: 0;
-    display: block;
-    float: none;
-    clear: both;
-    visibility: hidden;
-}
-
-.container-folder{
-    float: left;
-    clear: right;
-    margin: 11px 25px 11px 25px;
-    position: relative;
-}
-
-.folder{
-    width: 60px;
-    height: 60px;
-    padding: 10px;
-    position: relative;
-    z-index: 2;
-    box-shadow: 0 0 0 1px #3e7ef8;
-    border-radius: 3px;
-    cursor: pointer;
-}
-.folder:hover{
-    background: rgba(62, 126, 248, 0.1);
-    box-shadow: 0 0 0 2px #3e7ef8;
-}
-.folder:active{
-    background: rgba(62, 126, 248, 0.2);
-    transform: scale(0.97)
-}
-.title-folder{
-    max-width: 80px;
-    padding-top: 10px;
-    position: relative;
-    z-index: 1;
-    text-align: center;
-    letter-spacing: 1px;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    overflow: hidden;
-    cursor: default;
-}
-.folder:hover ~ .title-folder:after{
-    content: "Open";
-    width: 100%;
-    position: absolute;
-    left: 0;
-    background: #fff;
-}
-
-.icon-folder{
-    width: 20px;
-    height: 20px;
-    float: left;
-    clear: right;
-    margin: 5px;
-    box-shadow: 0 0 0 1px #3e7ef8;
-    border-radius: 1px;
-}
-
-._projects .icon-folder:nth-child(1){
-    box-shadow: 0 0 0 1px #ed3f3e;
-    border-radius: 10px;
-}
-._projects .folder:hover .icon-folder:nth-child(1){
-    box-shadow: 0 0 0 2px #ed3f3e;
-}
-._projects .icon-folder:nth-child(2){
-    box-shadow: 0 0 0 1px #2ecc71;
-    border-radius: 10px;
-}
-._projects .folder:hover .icon-folder:nth-child(2){
-    box-shadow: 0 0 0 2px #2ecc71;
-}
-._projects .icon-folder:nth-child(3){
-    box-shadow: 0 0 0 1px #f1c40f;
-}
-._projects .folder:hover .icon-folder:nth-child(3){
-    box-shadow: 0 0 0 2px #f1c40f;
-}
-._projects .icon-folder:nth-child(4){
-    box-shadow: 0 0 0 1px #82669c;
-    border-radius: 10px;
-}
-._projects .folder:hover .icon-folder:nth-child(4){
-    box-shadow: 0 0 0 2px #82669c;
-}
-
-._sketchs .icon-folder:nth-child(1){
-    box-shadow: 0 0 0 1px #82669c;
-}
-._sketchs .folder:hover .icon-folder:nth-child(1){
-    box-shadow: 0 0 0 2px #82669c;
-}
-._sketchs .icon-folder:nth-child(2){
-    box-shadow: 0 0 0 1px #f1c40f;
-    border-radius: 10px;
-}
-._sketchs .folder:hover .icon-folder:nth-child(2){
-    box-shadow: 0 0 0 2px #f1c40f;
-}
-._sketchs .icon-folder:nth-child(3){
-    box-shadow: 0 0 0 1px #2ecc71;
-}
-._sketchs .folder:hover .icon-folder:nth-child(3){
-    box-shadow: 0 0 0 2px #2ecc71;
-}
-._sketchs .icon-folder:nth-child(4){
-    box-shadow: 0 0 0 1px #ed3f3e;
-}
-._sketchs .folder:hover .icon-folder:nth-child(4){
-    box-shadow: 0 0 0 2px #ed3f3e;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*
-*
-* Colors
-*
-
-#4cc1ab
-#f15e22
-#ed3f3e
-#cbd1a9
-#82669c
-#e06c63
-#2cbeff
-#1abc9c
-#34495e
-#ec6d67
-#f1c40f
-#6a4a3c
-#2ecc71
-
-*/
-
-
-
-
-
-
-
-
 
 /*
 *
@@ -657,4 +484,23 @@ body {
 
 
 
+/*
+*
+* Colors
+*
 
+#4cc1ab
+#f15e22
+#ed3f3e
+#cbd1a9
+#82669c
+#e06c63
+#2cbeff
+#1abc9c
+#34495e
+#ec6d67
+#f1c40f
+#6a4a3c
+#2ecc71
+
+*/
