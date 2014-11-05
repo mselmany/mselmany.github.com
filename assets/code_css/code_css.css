@@ -140,24 +140,107 @@ body {
 
 .field-main {
     width: 100%;
-    max-width: 640px;
-    height: 100%;
+    max-width: 480px;
+    max-height: 100%;
     margin: 0 auto;
-    padding: 0 25px;
-    position: relative;
+    padding: 25px;
+    position: absolute;
 }
 
-.field-desktop{
+.widget-watch{
+    width: 280px;
+    height: 180px;
+    margin: 0 auto;
+    padding: 25px;
+    position: relative;
+   // box-shadow: 0 0 0 1px #f1c40f;
+    color: #f1c40f;
+    border-radius: 3px;
+    overflow: hidden;
+}
+.widget-watch:before,
+.widget-watch:after{
+    content: "";
+    width: 0;
+    height: 0;
+    display: block;
+    float: none;
+    clear: both;
+    visibility: hidden;
+}
+
+.field-air,
+.field-watch{
+    width: 50%;
+    height: 100%;
+    position: relative;
+    float: left;
+}
+
+.field-sun{
+    width: 70px;
+    height: 70px;
     position: absolute;
     top: 50%;left: 50%;
-    -webkit-transform: translateX(-50%) translateY(-50%);
-    -moz-transform: translateX(-50%) translateY(-50%);
-    -ms-transform: translateX(-50%) translateY(-50%);
-    -o-transform: translateX(-50%) translateY(-50%);
     transform: translateX(-50%) translateY(-50%);
 }
-.field-desktop:before,
-.field-desktop:after{
+.field-sun > .sun{
+    width: 100%;
+    height: 100%;
+    box-shadow: 0 0 0 1px #f1c40f;
+    border-radius: 2px;
+}
+.field-sun > .sun:before{
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;left: 0;
+    transform: rotate(45deg);
+    box-shadow: 0 0 0 1px #f1c40f;
+    border-radius: 2px;
+}
+.field-sun > .sun:after{
+    content: "";
+    width: 120%;
+    height: 120%;
+    position: absolute;
+    top: 50%;left: 50%;z-index: 3;
+    transform: translateX(-50%) translateY(-50%);
+    background: #fff;
+    box-shadow: 0 0 0 1px #f1c40f;
+    border-radius: 100%;
+}
+
+.field-watch > .watch{
+    position: relative;
+    top: 50%;left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    font-family: "Exo 2";
+    text-align: right;
+}
+.field-watch .watch > .clock{
+    font-size: 45px;
+    line-height: 45px;
+    font-weight: 100;
+}
+.field-watch .watch > .date{
+    padding: 10px 0;
+}
+
+.widget-main{
+    width: 280px;
+    min-height: 100px;
+    margin: 0 auto;
+    padding: 25px;
+    position: relative;
+   // box-shadow: 0 0 0 1px #3e7ef8;
+    color: #3e7ef8;
+    border-radius: 3px;
+    overflow: hidden;
+}
+.widget-main:before,
+.widget-main:after{
     content: "";
     width: 0;
     height: 0;
@@ -168,16 +251,18 @@ body {
 }
 
 .container-folder{
+    width: 50%;
+    padding-top: 15px;
+    position: relative;
     float: left;
     clear: right;
-    margin: 11px 25px 11px 25px;
-    position: relative;
 }
 
 .folder{
     width: 60px;
     height: 60px;
     padding: 10px;
+    margin: auto;
     position: relative;
     z-index: 2;
     box-shadow: 0 0 0 1px #3e7ef8;
@@ -195,6 +280,7 @@ body {
 .title-folder{
     max-width: 80px;
     padding-top: 10px;
+    margin: auto;
     position: relative;
     z-index: 1;
     text-align: center;
@@ -287,6 +373,65 @@ body {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+.field-header{
+    width: 100%;
+    height: 50px;
+    padding: 15px;
+    position: relative;
+    text-align: center;
+    line-height: 20px;
+    letter-spacing: 1px;
+    box-shadow: 0 1px 0 0 #3e7ef8;
+}
+
+.field-lists{
+    height: 310px;
+    position: relative;
+}
+
+.layer{
+    width: 100%;
+    height: 100%;
+    padding: 15px;
+    position: absolute;
+    top: 0;z-index: 1;
+    -webkit-box-sizing:border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.layer > ul li{
+    line-height: 30px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.layer > ul li > ul li{
+    color: #888;
+}
+.layer > ul li > ul li:before{
+    content: "└";
+    padding-right: 5px;
+    color: #888;
+}
+*/
 
 /*
 *
@@ -658,3 +803,43 @@ body {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+/*-----*/
+
+.status {
+    width: 100px;
+    height: 50px;
+    padding: 10px;
+    border: 0;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    z-index: 999999;
+    font: 100 14px/20px"Open Sans Condensed", sans-serif;
+    text-align: right;
+    background: #444;
+    color: #bbb;
+    opacity: 0.8;
+    overflow-x: hidden;
+    overflow-y: auto;
+    outline: 0;
+}
+.status:hover,
+.status:focus {
+    width: 180px;
+    height: 130px;
+    opacity: 1;
+}
+.status:focus {
+    outline: 2px solid #ff2c2c;
+}

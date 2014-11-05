@@ -1,0 +1,984 @@
+/*
+*
+* Css reset
+*
+*/
+html,
+body,
+div,
+span,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+code,
+del,
+dfn,
+em,
+img,
+q,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+dialog,
+figure,
+footer,
+header,
+hgroup,
+nav,
+section {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-weight: inherit;
+    font-style: inherit;
+    font-size: 100%;
+    font-family: inherit;
+    vertical-align: baseline;
+    text-decoration: none;
+    list-style: none;
+}
+img {
+    width: 100%
+}
+a:focus {
+    outline: thin dotted;
+}
+a:hover,
+a:active {
+    outline: 0;
+}
+a img {
+    border: 0;
+}
+*,
+*::before,
+*::after {
+    -webkit-text-rendering: optimizeLegibility;
+    -moz-text-rendering: optimizeLegibility;
+    -ms-text-rendering: optimizeLegibility;
+    -o-text-rendering: optimizeLegibility;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-font-smoothing: antialiased;
+    -ms-font-smoothing: antialiased;
+    -o-font-smoothing: antialiased;
+    font-smoothing: antialiased;
+}
+.anim03 {
+    -webkit-transition: all .3s;
+    -moz-transition: all .3s;
+    -ms-transition: all .3s;
+    -o-transition: all .3s;
+    transition: all .3s;
+}
+.anim04c {
+    -webkit-transition: all .4s cubic-bezier(.5, .35, .15, 1.4) !important;
+    transition: all .4s cubic-bezier(.5, .35, .15, 1.4) !important;
+}
+/*
+*
+* Css reset end.
+* Reedited for the theme specifics -bg image, body box-sizing etc.
+*
+*/
+html,
+body {
+    top: 0!important;
+    font-family: "Source Sans Pro", georgia, sans-serif;
+    color: #888;
+}
+html {
+    font-size: 62.5%;
+    overflow-y: scroll;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    background:#fff;
+}
+body {
+    padding-top: 100px;
+    overflow-x:hidden;
+    overflow-y:scroll;
+}
+.mainField {
+    width: 80%;
+    min-width: 480px;
+    max-width: 640px;
+    margin: auto;
+    position:relative;
+    top: 0;
+    background: #fff;
+    border-radius: 5px;
+    //overflow: hidden;
+}
+.mainField > .inner{
+    height: 100%;
+    border-radius: 5px;
+}
+/*
+*
+* Blog header field -title ,description, social icons etc.
+*
+*/
+.headerField{
+    height: 380px;
+    margin: auto;
+    position: relative;
+    border-radius: 5px 5px 0 0;
+}
+.headerField > .inner{
+    width: 100%;
+    height: 280px; /*-- height:this + this.padding --*/
+	padding: 50px 0;
+	position: relative;
+	border-radius: 5px 5px 0 0;
+}
+.headerField > .inner:after{
+	content: "";
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;left: 0;z-index: 2;
+	background: rgba(0, 0, 0, 0.2);
+    border-radius: 5px 5px 0 0;
+}
+#albumArtwork{
+    width: 100%;
+	height: 100%;
+    position: absolute;
+	top: 0;left: 0;
+    background-image: url("http://37.media.tumblr.com/896656ef638e8bc5db3f6c148d70d9d5/tumblr_n5e5qd8BB81st5lhmo1_1280.jpg");
+    background-position: center;
+	background-size: cover;
+	background-color: #fff;
+	background-repeat: no-repeat;
+    overflow: hidden;
+    border-radius: 5px 5px 0 0;
+    -webkit-transition: background-image .3s;
+    -moz-transition: background-image .3s;
+    -ms-transition: background-image .3s;
+    -o-transition: background-image .3s;
+    transition: background-image .3s;
+}
+/*-----*/
+.playerField{
+	width: 100%;
+	height: 100%;
+	position: relative;
+	z-index: 3;
+}
+/*-----*/
+.trackInfo{
+    width: 90%;
+    height: 100px;
+    margin: auto;
+    padding: 20px 0;
+    position: relative;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 900;
+    letter-spacing: 1px;
+    line-height: 50px;
+    text-shadow: 0 1px 2px #222;
+    color: #eee;
+}
+.trackInfo span,
+.trackInfo a{
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+.trackInfo a{
+    display: inline-block;
+    max-width: 100%;
+    color: #eee;
+    cursor: pointer;
+}
+.trackInfo a:hover{
+    color: #fff;
+}
+.trackInfo .artistName,
+.trackInfo .trackName{
+    display: block;
+}
+/*-----*/
+.playerFunction{
+    width: 100%;
+    height: 140px;
+    position: absolute;
+    bottom: 0;z-index: 0;
+}
+.playerFunction .inner.functions{
+	width: 80px;
+    height: 80px;
+    display: block;
+    margin: auto;
+	position: relative;z-index: 1;
+}
+/*-----*/
+.button.round{
+	width: 30px;
+    height: 30px;
+	border-radius: 100%;
+	text-align: center;
+	font-size: 16px;
+	line-height: 30px;
+	color: #eee;
+    text-shadow: 0 1px 2px #444;
+    box-shadow: 0 1px 2px 0 #444 inset,0 0 0 2px #eee,0 1px 2px 2px #444;
+	cursor: pointer;
+}
+.button.round.button_OFF{
+    opacity: 0.5;
+    box-shadow: none !important;
+    cursor: default;
+}
+.player.prev.button_OFF,
+.player.next.button_OFF{
+    z-index: -3;
+}
+/*-----*/
+.player{
+    position: absolute;
+    top: 25px;z-index: 3;
+}
+.player.prev,
+.player.next{
+    box-shadow: none;
+}
+.player.prev:hover,
+.player.next:hover{
+    box-shadow: 0 1px 2px 0 #444 inset,0 0 0 2px #eee,0 1px 2px 2px #444;
+}
+.player.prev{
+     left: -30px;
+}
+.player.next{
+     right: -30px;
+}
+.player.prev .fa{
+    text-indent: -2px;
+}
+.player.play,
+.player.pause{
+    width: 40px;
+    height: 40px;
+	font-size: 20px;
+	line-height: 40px;
+    left: 20px;top: 20px;
+}
+.player.play .fa{
+    text-indent: 3px;
+}
+.player.play:hover,
+.player.pause:hover{
+    box-shadow: 0 1px 4px 0 #444 inset,0 0 0 2px #eee,0 1px 2px 2px #222;
+    text-shadow: 0 1px 3px #222;
+}
+._PLAYING .player.play,
+._PAUSED .player.pause{
+    visibility: hidden;
+    display: none;
+    opacity: 0;
+}
+._PAUSED .player.play,
+._PLAYING .player.pause{
+    visibility: visible;
+    display: block;
+}
+/*-----*/
+.headerField .trackTime{
+    display: inline-block;
+    width: 90px;
+    position: absolute;
+    top: 20px;z-index: -3;
+    font-size: 14px;
+    line-height: 40px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-shadow: 0 1px 2px #222;
+    color: #eee;
+    cursor: default;
+}
+.headerField .trackTime.left{
+    left: -170px;
+    text-align: right;
+}
+.headerField .trackTime.right{
+    right: -170px;
+    text-align: left;
+}
+/*-----*/
+.trackDetail{
+    width:100%;
+    height: 50px;
+	display:block;
+    position: absolute;
+    bottom: 0;z-index: 9999;
+    font-size: 16px;
+    line-height: 50px;
+    font-weight: 900;
+    text-transform:capitalize;
+    text-shadow: 0 1px 2px #222;
+    color: #eee;
+}
+.trackDetail > .inner{
+    height:100%;
+	margin: 0 50px;
+	white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.button.normal{
+    display: inline-block;
+    position: relative;
+}
+.button.normal a{
+    cursor: pointer;
+}
+.button.normal,
+.button.normal a{
+    display: block;
+    max-width: 100px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    color: #eee;
+}
+.button.left{
+    margin-right: 20px;
+    float: left;
+    cursor: default !important;
+}
+.button.right{
+    margin-left: 20px;
+    float: right;
+}
+.button.left:last-of-type{
+    margin-right: 0;
+}
+.button.right:first-of-type{
+    margin-left: 0;
+}
+.forSource:hover a{
+    color: #f80;
+}
+.forTweet:hover a{
+    color: #55acee;
+}
+/*
+*
+* Main area - like sounds ,etc.
+*
+*/
+.soundField{
+    padding:30px 0;
+	position: relative;
+	overflow: hidden;
+}
+.oneSound{
+    width:100%;
+    height: 75px;
+    padding-bottom: 2px;
+    display: block;
+    position: relative;
+    opacity: 0.8;
+    overflow: hidden;
+    background: #fff;
+}
+.oneSound:hover{
+	opacity: 1;
+}
+.oneSound_ON{
+    opacity: 1;
+}
+.forFixedPosition{
+    width:100%;
+    height: 77px;
+    display: block;
+    position: relative;
+}
+._FIXED,
+._FIXED2{
+    max-width: 640px;
+    background: #f8f8f8;
+	position: fixed;
+	z-index: 9999;
+}
+._FIXED{
+    top: 0;
+    box-shadow: 0 1px 0 0 #eee;
+}
+._FIXED2{
+    bottom: 0;
+    box-shadow: 0 -1px 0 0 #eee;
+}
+.oneSound .forFixedPosition > .inner{
+    height: 45px;
+    margin: 0 50px;
+    padding: 15px 0;
+    position: relative;z-index: 0;
+    border-bottom: 2px solid #f8f8f8;
+    cursor: pointer;
+}
+.oneSound:last-child .forFixedPosition > .inner{
+    border-bottom: 2px solid #fff;
+}
+.oneSound:last-child.oneSound_ON .forFixedPosition > .inner{
+    border-bottom: 2px solid #f8f8f8;
+}
+.albumPhoto{
+    width: 45px;
+    height: 45px;
+    position: absolute;
+    top: 15px;left: 0;z-index: 1;
+    box-shadow: 0 0 0 2px #eee;
+    border-radius: 100%;
+    overflow: hidden;
+}
+.albumPhoto img{
+    width: 100%;
+    height: 100%;
+    border: 0;
+    border-radius: 100%;
+}
+.oneSound .trackName,
+.oneSound .artistName{
+    height: 20px;
+    padding-left: 60px;
+    position: relative;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    color: #888;
+}
+.oneSound .trackName{
+    margin-bottom: 5px;
+	font-weight: 900;
+}
+.oneSound .artistName{
+    margin-top: 5px;
+}
+.oneSound .trackName:before,
+.oneSound .artistName:before{
+    display: none;
+    content: "PLAY";
+    height: 16px;
+    padding: 0 5px;
+    position: absolute;
+    top: 2px;left: 60px;
+    background: #888;
+    color: #eee;
+    border-radius: 3px;
+    font-size: 11px;
+    line-height: 16px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    text-shadow: none;
+}
+.oneSound:hover .trackName:before{
+    display: block;
+}
+.oneSound.oneSound_PLAYING,
+.oneSound.oneSound_PAUSED{
+    opacity: 1;
+    background: #f8f8f8;
+    box-shadow: 0 -2px 0 0 #f8f8f8;
+}
+.oneSound.oneSound_PLAYING .albumPhoto,
+.oneSound.oneSound_PAUSED .albumPhoto{
+    box-shadow: none;
+}
+.oneSound.oneSound_PLAYING .trackName:before,
+.oneSound.oneSound_PAUSED .trackName:before{
+    display: none;
+}
+.oneSound.oneSound_PLAYING .artistName,
+.oneSound.oneSound_PAUSED .artistName{
+    padding-left: 125px;
+    font-weight: 600;
+}
+.oneSound.oneSound_PLAYING .artistName:before,
+.oneSound.oneSound_PAUSED .artistName:before{
+    display: block;
+    left: 60px;
+}
+.oneSound.oneSound_PLAYING .artistName:before{
+    content: "PLAYING";
+    background: #68c171;
+}
+.oneSound.oneSound_PLAYING:hover .artistName:before{
+    content: "PAUSE";
+    background: #888;
+}
+.oneSound.oneSound_PAUSED .artistName:before{
+    content: "PAUSED";
+    background: #e65858;
+}
+.oneSound.oneSound_PAUSED:hover .artistName:before{
+    content: "PLAY";
+    background: #888;
+}
+.oneSound_PLAY,
+.oneSound_PAUSE{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;left: 0;
+    opacity: 0 !important;
+    cursor: pointer !important;
+    background: #f8f8f8;
+}
+.oneSound_PAUSE,
+.oneSound_PLAYING .oneSound_PLAY{
+    z-index: -1 !important;
+    visibility: hidden !important;
+    display: none;
+}
+.oneSound_PLAY,
+.oneSound_PLAYING .oneSound_PAUSE{
+    z-index: 9998 !important;
+    visibility: visible !important;
+    display: block;
+}
+.oneSound .trackTime{
+    margin-left: 5px;
+    display: inline-block;
+    visibility: hidden;
+    opacity: 0;
+    -webkit-transition: all .3s;
+    -moz-transition: all .3s;
+    -ms-transition: all .3s;
+    -o-transition: all .3s;
+    transition: all .3s;
+    -webkit-transform:translateY(100%);
+    -moz-transform:translateY(100%);
+    -ms-transform:translateY(100%);
+    -o-transform:translateY(100%);
+    transform:translateY(100%);
+}
+.oneSound .trackTime:before{
+    content: "\2022 ";
+	margin-right:5px;
+}
+.oneSound.oneSound_ON .trackTime{
+    visibility: visible;
+    opacity: 1;
+    -webkit-transform:translateY(0);
+    -moz-transform:translateY(0);
+    -ms-transform:translateY(0);
+    -o-transform:translateY(0);
+    transform:translateY(0);
+        
+}
+.progressbarContainer > .inner{
+    width: 100%;
+    height: 100%;
+    padding: 4px 0;
+    position: relative;
+    top: -4px;z-index: 2;
+}
+.progressbarValue{
+    height: 100%;
+    width: 0;
+    position: absolute;
+    top: 0;z-index: 0;
+    -webkit-transition: width .3s;
+    -moz-transition: width .3s;
+    -ms-transition: width .3s;
+    -o-transition: width .3s;
+    transition: width .3s;
+}
+
+.progressbarContainer.header{
+    width: 90%;
+    height: 2px;
+    margin: 20px auto auto auto;
+    position: relative;z-index: 1;
+    background: rgba(29, 29, 29, 0.5);
+    -webkit-transition: height .3s;
+    -moz-transition: height .3s;
+    -ms-transition: height .3s;
+    -o-transition: height .3s;
+    transition: height .3s;
+    cursor:w-resize;
+    border-radius: 5px;
+}
+.progressbarContainer.header:hover{
+    height: 10px;
+}
+.progressbarContainer.header > .inner{
+    border-radius: 5px;
+}
+.header .progressbarValue{
+    background: #fff;
+    border-radius: 5px;
+}
+
+.progressbarContainer.sound{
+    width: 100%;
+    height: 2px;
+    position: absolute;
+    bottom: 0;z-index: 9999;
+    visibility: hidden;
+    opacity: 0;
+    -webkit-transition: height .3s;
+    -moz-transition: height .3s;
+    -ms-transition: height .3s;
+    -o-transition: height .3s;
+    transition: height .3s;
+    cursor:w-resize;
+}
+._FIXED .progressbarContainer.sound{
+    bottom: 0;top: auto;
+}
+._FIXED2 .progressbarContainer.sound{
+    top: 0;bottom: auto;
+}
+.oneSound_ON .progressbarContainer.sound{
+    visibility: visible;
+    opacity: 1;
+}
+.oneSound.oneSound_ON:hover .progressbarContainer.sound{
+    height: 5px;
+    opacity: 0.8;
+    background: #eee;
+}
+.oneSound.oneSound_ON .progressbarContainer.sound:hover{
+    height: 100%;
+    opacity: 0.8;
+    background: transparent;
+}
+.progressbarContainer.sound > .inner{
+}
+.sound .progressbarValue{
+    background: #e65858;
+}
+/*
+*
+* Slider - plugin...
+*
+*/
+.slideshowField{
+    width: 100%;
+	height: 100%;
+	top: 0;left: 0;
+    background: #fff;
+    overflow: hidden;
+}
+body > .slideshowField{
+	position: fixed;
+}
+.headerField .slideshowField{
+	position: absolute;
+    border-radius: 5px 5px 0 0;
+}
+.slideshow{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+	top: 0;left: 0;
+	background-position: center;
+	background-size: cover;
+	background-color: #fff;
+	background-repeat: no-repeat;
+    display: none;
+    border-radius: 5px 5px 0 0;
+}
+.slideshow.slideshow_ON{
+    /*must be empty for animation*/
+}
+.slideshow:nth-child(1){
+    background-image: url("http://25.media.tumblr.com/18e25cdcdaaced3b2b8a467724720ece/tumblr_n10n1wmxiS1st5lhmo1_1280.jpg");
+}
+.slideshow:nth-child(2){
+    background:#fff;
+    /*background-image: url("http://24.media.tumblr.com/c07be931db3413ff50fb452346d52c8f/tumblr_n5e5tyYJkE1st5lhmo1_1280.jpg");*/
+}
+.slideshow:nth-child(3){
+    background-image: url("http://37.media.tumblr.com/896656ef638e8bc5db3f6c148d70d9d5/tumblr_n5e5qd8BB81st5lhmo1_1280.jpg");
+}
+.slideshow:nth-child(4){
+    background-image: url("http://24.media.tumblr.com/a75978ee3a0901eb3f04731a99721818/tumblr_n5e0flmR0u1st5lhmo1_1280.jpg");
+}
+.slideshow:nth-child(5){
+    background-image: url("http://24.media.tumblr.com/7ce243009a1cf8cb08284b0739af665c/tumblr_n4cm5slQ8N1st5lhmo1_1280.jpg");
+}
+.slider{
+    position: absolute;
+    box-shadow: none !important;
+    top: 50%;z-index: 3;
+    -webkit-transform:translateY(-50%);
+    -moz-transform:translateY(-50%);
+    -ms-transform:translateY(-50%);
+    -o-transform:translateY(-50%);
+    transform:translateY(-50%);
+}
+.slider.prev{
+     left: -40px;
+}
+.slider.next{
+     right: -40px;
+}
+.slider:hover{
+	box-shadow: 0 1px 2px 0 #444 inset,0 0 0 2px #eee,0 1px 2px 2px #444 !important;
+}
+#footer{
+    width: 100%;
+    height: 30px;
+    padding: 60px 0 10px 0;
+    position: relative;
+    font-weight: 600;
+    text-align: center;
+    text-shadow: 0 1px 2px #222;
+    color: #bbb;
+}
+#footer a{
+    color: #ccc;
+    font-weight: 900;
+}
+#footer a:hover{
+    color: #fff;
+}
+/*
+progress,         
+progress[role]{
+	appearance: none;
+	-moz-appearance: none;
+	-webkit-appearance: none;
+	border: none;
+}
+progress[role]:after {
+	background-image: none;
+}
+progress[role] strong {
+	display: none;
+}
+progress,                          
+progress[role][aria-valuenow] {    
+   background: transparent !important; 
+}
+progress::-webkit-progress-bar {
+    background: transparent;
+}
+progress {
+    color: transparent;
+}
+progress::-moz-progress-bar { 
+    background: transparent;	
+}
+progress::-webkit-progress-value {
+    background: transparent;
+}
+progress[aria-valuenow]:before  {
+    background: transparent;
+}
+progress:not([value])::-moz-progress-bar { 
+  background: transparent;
+}
+progress:not([value])::-webkit-progress-bar {
+  background: transparent;
+}
+progress[role]{
+	background: transparent;
+}
+progress:not([value])  {
+	background: transparent;
+	background-size: auto;  
+}
+.progressBar.sound {
+    color: #e65858;
+}
+.progressBar.sound::-moz-progress-bar { 
+    background: #e65858;	
+}
+.progressBar.sound::-webkit-progress-value {
+    background: #e65858;
+}
+.progressBar.sound[aria-valuenow]:before  {
+    background: #e65858;
+}
+.progressBar.sound:not([value])::-moz-progress-bar { 
+  background:#e65858;
+}
+.progressBar.sound:not([value])::-webkit-progress-bar {
+  background:#e65858;
+}
+.progressBar.sound[role]{
+	background:#e65858;
+}
+.progressBar.sound:not([value])  {
+	background:#e65858;
+	background-size: auto;  
+}
+.progressBar.sound{
+    width: 100%;
+    height: 2px;
+    position: absolute;
+    bottom: 0;z-index: 9999;
+    visibility: hidden;
+    opacity: 0;
+    -webkit-transition: height .3s;
+    -moz-transition: height .3s;
+    -ms-transition: height .3s;
+    -o-transition: height .3s;
+    transition: height .3s;
+    cursor:w-resize;
+}
+._FIXED .progressBar.sound{
+    bottom: 0;top: auto;
+}
+._FIXED2 .progressBar.sound{
+    top: 0;bottom: auto;
+}
+.oneSound_ON .progressBar.sound{
+    visibility: visible;
+    opacity: 1;
+}
+.oneSound.oneSound_ON:hover .progressBar.sound{
+    height: 5px;
+    opacity: 0.8;
+}
+.oneSound.oneSound_ON .progressBar.sound:hover{
+    height: 100%;
+    opacity: 0.8;
+}
+.oneSound.oneSound_ON:hover .progressBar.sound,                          
+.oneSound.oneSound_ON:hover .progressBar.sound[role][aria-valuenow] {    
+   background: #eee !important; 
+}
+.oneSound.oneSound_ON:hover .progressBar.sound::-webkit-progress-bar {
+    background: #eee;
+}
+.oneSound.oneSound_ON .progressBar.sound:hover,                          
+.oneSound.oneSound_ON .progressBar.sound:hover[role][aria-valuenow] {    
+   background: transparent !important; 
+}
+.oneSound.oneSound_ON .progressBar.sound:hover::-webkit-progress-bar {
+    background: transparent;
+}
+.progressBar.header{
+    width: 90%;
+    height: 2px;
+    position: absolute;
+    bottom: 30px;
+    padding-left: 10%;
+    visibility: visible;
+    opacity: 1;
+    -webkit-transition: height .3s;
+    -moz-transition: height .3s;
+    -ms-transition: height .3s;
+    -o-transition: height .3s;
+    transition: height .3s;
+    cursor:w-resize;
+}
+.progressBar.header:hover{
+    height: 10px;
+    opacity: 0.8;
+}
+.progressBar.header {
+    color: #eee;
+}
+.progressBar.header::-moz-progress-bar { 
+    background: #eee;	
+}
+.progressBar.header::-webkit-progress-value {
+    background: #eee;
+}
+.progressBar.header[aria-valuenow]:before  {
+    background: #eee;
+}
+.progressBar.header:not([value])::-moz-progress-bar { 
+  background:#eee;
+}
+.progressBar.header:not([value])::-webkit-progress-bar {
+  background:#eee;
+}
+.progressBar.header[role]{
+	background:#eee;
+}
+.progressBar.header:not([value])  {
+	background:#eee;
+	background-size: auto;  
+}
+.progressBar.header::-webkit-progress-bar {
+    background: rgba(0, 0, 0, 0.5);
+}
+*/
+/*------------
+*
+** Page navigation
+*
+---------------*/
+/*
+.oneBlock{
+    font-weight: 900;
+    text-transform: capitalize;
+}
+.oneBlock.pagination{
+    height: 20px;
+    margin-top: 20px;
+}
+.pagination .prev{
+    width: 50%;
+    float: left;
+    text-align: right;
+    box-shadow: 1px 0 0 0 #f9f9f9,-1px 0 0 0 #f9f9f9 inset;
+}
+.pagination .prev a{
+    margin-right: 15px;
+}
+.pagination .prev a:before{
+    content: "←";
+	margin-right: 5px;
+}
+.pagination .next{
+    width: 50%;
+    float: right;
+    text-align: left;
+}
+.pagination .next a{
+    margin-left: 15px;
+}
+.pagination .next a:after{
+    content: "→";
+	margin-left: 5px;
+}
+.pagination a{
+    color: #888;
+    opacity: 0.8;
+}
+.pagination a:hover{
+    opacity: 1;
+}
+*/
+
+
