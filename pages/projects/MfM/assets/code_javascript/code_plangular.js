@@ -11,7 +11,7 @@
 'use strict';
 
 var plangular = angular.module('plangular', []),
-    clientID = '0d33361983f16d2527b01fbf6408b7d7',
+    clientID = '0d296a771121cfe2c490626a6d226710',
     iconUrl = 'icons/plangular-icons.svg';
 
 plangular.directive('plangular', function ($document, $rootScope, $http) {
