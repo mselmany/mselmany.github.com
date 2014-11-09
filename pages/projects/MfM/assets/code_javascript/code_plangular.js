@@ -89,6 +89,7 @@ plangular.directive('plangular', function ($document, $rootScope, $http) {
       updateData: function(val,val2){
             indexCustom = val;  
             indexCustom2 = val2;
+            $("title").text("MfM | "+indexCustom.user.username+" - "+indexCustom.title);
             $("#artistName").text(indexCustom.user.username);
             $("#trackName").text(indexCustom.title);
             $("#forPlayed span").text(indexCustom.playback_count);

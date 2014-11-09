@@ -74,5 +74,5 @@ $(".headerField .slider").bind("click",function(){
 });
 	               
 //$(".status").text();
-    
+        
 });
