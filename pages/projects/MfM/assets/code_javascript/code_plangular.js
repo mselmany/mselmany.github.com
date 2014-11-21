@@ -11,7 +11,7 @@
 'use strict';
 
 var plangular = angular.module('plangular', []),
-    clientID = '0d296a771121cfe2c490626a6d226710';
+    clientID = 'd01accc030bfaa3bb48783eb7f2db5e6';
 
 plangular.directive('plangular', function ($document, $rootScope, $http) {
     // Define the audio engine
