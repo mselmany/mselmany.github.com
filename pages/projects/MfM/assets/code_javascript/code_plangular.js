@@ -11,8 +11,7 @@
 'use strict';
 
 var plangular = angular.module('plangular', []),
-    clientID = '0d296a771121cfe2c490626a6d226710',
-    iconUrl = 'icons/plangular-icons.svg';
+    clientID = '0d296a771121cfe2c490626a6d226710';
 
 plangular.directive('plangular', function ($document, $rootScope, $http) {
     // Define the audio engine
@@ -187,30 +186,6 @@ plangular.directive('plangular', function ($document, $rootScope, $http) {
     }
   });
 
-// Plangular Icons
-plangular.directive('plangularIcon', function() {
-  var xmlHttp = null,
-      sprite;
-  xmlHttp = new XMLHttpRequest();
-  xmlHttp.open('GET', iconUrl, false);
-  xmlHttp.send(null);
-  if(xmlHttp.responseXML) sprite = xmlHttp.responseXML.documentElement;
-  else console.error('Icon sprite not found - check iconUrl variable in plangular.js');
-  return {
-    restrict: 'A',
-    scope: true,
-    link: function (scope, elem, attrs) {
-      if (!sprite) return false;
-      var el = elem[0],
-          id = attrs.plangularIcon,
-          svg = sprite.getElementById(id).cloneNode(true);
-      el.className += ' plangular-icon plangular-icon-' + id;
-      svg.removeAttribute('id');
-      svg.setAttribute('class', el.className);
-      el.parentNode.replaceChild(svg, el);
-    }
-  }
-});
 
 // Filter to convert milliseconds to hours, minutes, seconds
 plangular.filter('playTime', function() {
