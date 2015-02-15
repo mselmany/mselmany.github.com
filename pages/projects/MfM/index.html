@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,600,900|Montserrat:400,700|Nunito:300,700&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+	<link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta charset="utf-8" />
+    <title>Mfm - Musics from Mimo</title>
+    <meta name="description" content="Mfm, Musics from Mimo, Soundcloud, Remixed Musics, Music, mselmany, Popular Musics, Sound" />
+    <!-- HTML5 Shiv -->
+    <!--[if lt IE 9]>
+    <script src="http://static.tumblr.com/hriofhd/Qj0m8pn7q/html5shiv.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" href="assets/code_css/code_css.css">
+	<script src="assets/code_javascript/jquery.min.js"></script>
+	<script src="assets/code_javascript/angular.min.js"></script>    
+</head>
+
+<body ng-app="plangular">
+
+    <ul class="slideshowField">
+        <li class="slideshow"></li>
+        <li class="slideshow"></li>
+        <li class="slideshow slideshow_ON"></li>
+        <li class="slideshow"></li>
+        <li class="slideshow"></li>
+    </ul>
+
+    <section class="mainField anim03" plangular data-src="https://soundcloud.com/mselmany/sets/m4d">
+        <div class="inner">
+
+            <aside class="headerField">
+                <div class="inner">
+
+                    <div class="button round slider prev"><i class="fa fa-caret-left"></i></div>
+                    <div class="button round slider next"><i class="fa fa-caret-right"></i></div>
+
+                    <div id="albumArtwork"></div>
+
+                    <div class="playerField">
+                        <div class="trackInfo" id="forSource">
+                            <a href="https://soundcloud.com/mselmany/sets/m4d" target="_blank">
+                                <span class="artistName" id="artistName">Musics from Mimo</span>
+                                <span class="trackName" id="trackName">Selected sounds from Mimo(I'm a cat)...</span>
+                            </a>
+                        </div>
+                        <div class="playerFunction">
+                            <div class="inner functions _PAUSED" id="player" ng-class="{'_PLAYING': (player.playing && playlist.tracks) == player.tracks, '_PAUSED': (player.playing && playlist.tracks) != player.tracks}">
+                                <span class="trackTime left">{{ currentTime | playTime }}</span>
+                                <span class="trackTime right">{{ duration | playTime }}</span>
+                                <div class="button round player prev" id="prev" ng-click="player.previous(playlist)"><i class="fa fa-caret-left"></i></div>
+                                <div class="button round player next" id="next" ng-click="player.next(playlist)"><i class="fa fa-caret-right"></i></div>
+                                <div class="button round player play" id="play" ng-click="player.playPlaylist(playlist)"><i class="fa fa-play"></i></div>
+                                <div class="button round player pause" id="pause" ng-click="player.pause()"><i class="fa fa-pause"></i></div>
+                            </div>
+                            <div class="progressbarContainer header">
+                                <div class="inner" ng-click="seekTo($event)"></div>
+                                <div class="progressbarValue"></div>
+                            </div> 
+                        </div>
+                    </div>
+
+                    <div class="trackDetail anim03">
+                        <div class="inner">
+                            <div class="button normal left forPlayed" id="forPlayed"><i class="fa fa-play"></i> <span> You Listen</span></div>
+                            <div class="button normal left forLiked" id="forLiked"><i class="fa fa-heart"></i> <span> I like</span></div>
+                            <div class="button normal right forSource" id="forSource"><a href="https://soundcloud.com/mselmany/sets/m4d" target="_blank"><i class="fa fa-soundcloud"></i> Source</a></div>
+                            <div class="button normal right forTweet" id="forTweet"><a href="https://twitter.com/intent/tweet?text=Musics from Mimo - http://musicsfrommimo.tumblr.com" target="_blank"><i class="fa fa-twitter"></i> Tweet</a></div>
+                        </div>
+                    </div>
+
+                </div> 
+            </aside>
+
+            <ul class="soundField">
+
+                <li ng-repeat="track in playlist.tracks" class="oneSound" ng-class="{ 'oneSound_PAUSED': player.paused == track,'oneSound_PLAYING': player.playing == track}">
+                    <div class="forFixedPosition">
+                        <div class="oneSound_PLAY" ng-click="player.play(playlist.tracks, $index)"></div>
+                        <div class="oneSound_PAUSE" ng-click="player.pause()"></div>
+                        <div class="inner">
+                            <div class="albumPhoto"><img src="{{track.artwork_url}}" alt="{{track.title}}"></div>
+                            <div class="trackName">{{track.title}}</div>
+                            <div class="artistName">{{track.user.username}}<span class="trackTime">{{ currentTime | playTime }} | {{ duration | playTime }}</span></div>
+                        </div>
+                        <div class="progressbarContainer sound">
+                            <div class="inner" ng-click="seekTo($event)"></div>
+                            <div class="progressbarValue"></div>
+                        </div> 
+                    </div>
+                </li>
+
+            </ul>
+
+        </div>
+    </section>
+    <div id="footer">
+        Made <i>without</i> love by <a href="https://creativemarket.com/mselmany" target="_blank" title="Designer&Developer">mselmany</a>. Powered by <a href="https://soundcloud.com" target="_blank">SoundCloud</a> and <a href="http://jxnblk.github.io/plangular/" target="_blank">Plangular</a>
+    </div>
+	
+    <script src="assets/code_javascript/code_plangular.js"></script>
+    <script src="assets/code_javascript/code_javascript.js"></script>
+
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})
+        (window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-51883369-1', 'tumblr.com');
+        ga('send', 'pageview');
+    </script>
+
+</body>
+
+</html>
