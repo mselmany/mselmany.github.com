@@ -3,4 +3,4 @@ published: true
 title: deneme
 layout: post
 ---
-deneme 11111111
+deneme 
